@@ -180,9 +180,9 @@ void test_lambada_fucvtion()
 
 void higher_order_function()
 {
-    auto sum2 = [](int a , int b, function<int(int,int)> y){return y(a,b)};
+    auto sum2 = [](int a , int b, function<int(int,int)> y){return y(a, b);};
 
-    cout <<"sum from higher function = "<<sum2(3,4,[](int x,int y){return x+y});
+    cout <<"sum from higher function = "<<sum2(3,4,[](int x,int y){return x+y;})<<endl;
 }
 
 
@@ -209,7 +209,7 @@ int main()
 
    //test_lambada_fucvtion();
 
-   higher_order_function();
+   //higher_order_function();
 
     return 0;
 }
