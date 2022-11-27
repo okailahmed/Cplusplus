@@ -1,7 +1,11 @@
 #include <iostream>
 #include <string>
+#include <cmath>
 
 using namespace std;
+const double pi= 22/7.0;
+
+
 
 //this is function print array element with index and with pointer and address 
 void array_with_index_and_pointer()
@@ -89,6 +93,73 @@ void string_builtIn_functions()
 }
 
 
+void math_builtIn_functions()
+{
+
+    cout<<"max(4,9) is "<<max(4,9)<<endl;                         //this funciton will return maxmum of two numbers 
+    cout<<"min(4,9) is "<<min(4,9)<<endl;                          //this funciton will return minimum of two numbers 
+    cout<<"|-4|is "<<abs(-4)<<endl;                              //this funciton will return absolute value for this number 
+    cout<<"sqrt(9) is "<<sqrt(9)<<endl;                         //this function will return the squar root for this number 
+    cout<<"3^4 is "<<pow(3,4)<<endl;                            //this function will calc the power of 
+    cout<<"2^4 is "<<exp2(4)<<endl;                             //this function will calc the power of 2 
+    cout<<"log(10) is "<<log10(10)<<endl;                       // this function get the value for log(10)
+    cout<<"ln(10) is "<<log(10)<<endl;                          //this function to get get the ln(10)
+    cout<<"e^10 is "<<exp(1)<<endl;                              //
+    cout<<"(e^10)-1 is "<<expm1(1)<<endl;                    
+    cout<<"remainder(9,7) is "<<remainder(9,7)<<endl;        //get reminder 
+    cout<<"fmod(7,6) is "<<fmod(7,6)<<endl;                  //get reminder 
+    cout<<"copysign(3,-9) is "<<copysign(3,-9)<<endl;        // copy sign of the seconde to the first number 
+
+    //we need to change the angle to radian to be acceptable 
+    cout<<"sin(30) is "<<sin(30*pi/180)<<endl;
+    cout<<"cos(60) is "<<cos(60*pi/180)<<endl;
+    cout<<"tan(45) is "<<tan(45*pi/180)<<endl;
+    
+    cout<<"asin(0.5) is "<<asin(0.5)*pi/180<<endl;
+    cout<<"acos(0.5) is "<<acos(0.5)*pi/180<<endl;
+    cout<<"atan(1) is "<<atan(1)*pi/180<<endl;
+
+
+
+    //this function near the number to the near high integer number 
+    cout<<"ceil(6.1) is "<<ceil(6.1)<<endl;
+    cout<<"ceil(6.9) is "<<ceil(6.9)<<endl;
+
+    //this function near the number to the near small  integer number 
+    cout<<"floor(6.1) is "<<floor(6.1)<<endl;
+    cout<<"floor(6.9) is "<<floor(6.9)<<endl;
+
+    //it near depend on it value ot it is > 0.5 it will be to the highest and visa verca 
+    cout<<"round(6.1) is "<<round(6.1)<<endl;
+    cout<<"round(6.9) is "<<round(6.9)<<endl;
+
+    //same like before 
+    cout<<"rint(6.1) is "<<rint(6.1)<<endl;
+    cout<<"rint(6.9) is "<<rint(6.9)<<endl;
+
+    //same like before 
+    cout<<"nearbyint(6.1) is "<<nearbyint(6.1)<<endl;
+    cout<<"nearbyint(6.9) is "<<nearbyint(6.9)<<endl;
+}
+
+void exception_cplusplus()
+{
+    try
+    {
+        int n;
+        cout<<"Enter integer number "<<endl;
+        cin>>n;
+        if(n<0) throw "Error";
+        cout<<"number "<<n<<endl;
+    }
+    catch(const char *s)
+    {
+        cout<<s<<endl;
+    }
+    
+}
+
+
 int main()
 {
     //array_with_index_and_pointer();
@@ -104,7 +175,11 @@ int main()
     // swap(&x,&y);
 
     // cout<<"x= "<<x<<" y= "<<y;
-    string_builtIn_functions();
+    //string_builtIn_functions();
+
+    //math_builtIn_functions();
+
+    exception_cplusplus();
 
     return 0;
 }
