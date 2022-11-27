@@ -6,13 +6,18 @@ using namespace std;
 
 
 
-class human{
+class Human{
 
 private:
     string name;
     int age;
 public:
 
+    Human(string name,int age)
+    {
+        this->name = name;
+        this->age  = age;
+    }
     void setValues(string p_name,int p_age)
     {
         this->name = p_name;
@@ -20,7 +25,6 @@ public:
     }
     void getValues()
     {
-        this->age = this->age+1;
         cout<< this->name<<endl;
         cout<< this->age<<endl;
     }
@@ -43,9 +47,8 @@ int main()
     cout<<endl;
 
 
-    human h1;    //this object 
+    Human h1 = Human("ahmed", 28);    //this object 
 
-    h1.setValues(name, age);
 
     h1.getValues();
 
