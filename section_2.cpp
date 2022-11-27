@@ -1,6 +1,7 @@
 #include <iostream>
 #include <string>
 #include <cmath>
+#include <functional>
 
 using namespace std;
 const double pi= 22/7.0;
@@ -159,6 +160,23 @@ void exception_cplusplus()
     
 }
 
+void test_lambada_fucvtion()
+{
+    int i,j;
+    cout<<"please enter this numbers"<<endl;
+    cin>>i>>j;
+
+
+    function<void(void)> y1 = []{cout<<10+20<<endl;};
+    function<int(void)> y2 = []{return 10+20;};
+    function<int(void)> y3 = [i, j]{return i+j;};
+    function<int(int,int)> y4 = [](int i,int j){return i+j;};
+
+    cout<< y2() <<endl;
+    cout<< y3() <<endl;
+    cout<< y4(i,j) <<endl;
+}
+
 
 int main()
 {
@@ -179,7 +197,9 @@ int main()
 
     //math_builtIn_functions();
 
-    exception_cplusplus();
+   // exception_cplusplus();
+
+   test_lambada_fucvtion();
 
     return 0;
 }
