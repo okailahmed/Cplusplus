@@ -7,7 +7,6 @@ using namespace std;
 
 
 class Human{
-
 private:
     string name;
     int age;
@@ -33,6 +32,31 @@ public:
 };
 
 
+class father {
+
+    private:
+        string name;
+        int age;
+    public:
+        string color;
+        int age;
+    protected:
+        string home_no;
+
+    void set_name()
+    {
+
+    }
+    
+
+};
+
+
+class son: public father{
+
+
+};
+
 int main()
 {
 
@@ -51,6 +75,10 @@ int main()
 
 
     h1.getValues();
+
+    son s= son();
+
+    s.color = "brown";
 
 
     return 0;
