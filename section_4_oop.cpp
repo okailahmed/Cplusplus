@@ -71,6 +71,8 @@ class operation: public Sum{
         }
 };
 
+
+
 int main()
 {
 
@@ -96,8 +98,12 @@ int main()
     */
 
 
+   /*
    operation op;
    op.sum(2,2);
+   */
+
+
 
 
     return 0;
