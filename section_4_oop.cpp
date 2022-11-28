@@ -72,17 +72,7 @@ class operation: public Sum{
 };
 
 
-class ConstClass{
-    public:
-        const int age;
-        void info const(){
-            cout<<"Const FUnction"<<endl;
-        }
 
-        void print(){
-            cout<<"Hello"<<endl;
-        }
-};
 
 
 int main()
@@ -115,7 +105,7 @@ int main()
    op.sum(2,2);
    */
 
-    const ConstClass Cc;
+
 
 
 
