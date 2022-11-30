@@ -28,22 +28,52 @@ int main()
     // }
 
 
-    queue<int> q;
+    // queue<int> q;
 
-    q.push(3);
-    q.push(6);
-    q.emplace(2);
+    // q.push(3);
+    // q.push(6);
+    // q.emplace(2);
 
-    q.pop();
+    // q.pop();
 
-    while(!q.empty())
-    {
-        cout<<q.front()<<endl;
-        q.pop();
-    }
+    // while(!q.empty())
+    // {
+    //     cout<<q.front()<<endl;
+    //     q.pop();
+    // }
 
+    // priority_queue<int> pq;  //for this element will be arranged from  to low 
 
+    // pq.push(3);
+    // pq.push(6);
+    // pq.push(8);
+    // pq.emplace(2);
+    // pq.push(5);
+
+    // pq.pop();
     
+    // while(!pq.empty())
+    // {
+    //     cout<<pq.top()<<endl;
+    //     pq.pop();
+    // }
+
+
+     priority_queue<int , deque<int>, greater<>> pq;  //for this we make queue work with deque
+
+    pq.push(3);
+    pq.push(6);
+    pq.push(8);
+    pq.emplace(2);
+    pq.push(5);
+
+    pq.pop();
+    
+    while(!pq.empty())
+    {
+        cout<<pq.top()<<endl;
+        pq.pop();
+    }
 
     return 0;
 }
