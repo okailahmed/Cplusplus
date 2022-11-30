@@ -77,25 +77,40 @@ int main(){
     // }
 
 
-        l.sort();  //to sort element in assending way 
+        // l.sort();  //to sort element in assending way 
 
-        l.sort(greater<int>());  //to sort elements in deassending way 
+        // l.sort(greater<int>());  //to sort elements in deassending way 
 
-        l.reverse();          //to reverse element in the list 
+        // l.reverse();          //to reverse element in the list 
 
-        l.remove(5);           //this will remove all 5 elements 
+        // l.remove(5);           //this will remove all 5 elements 
 
 
 
-        // this is will remove elemenst in a specific condition 
-        l.remove_if([](int n){      
-            return n%2;
-        });
+        // // this is will remove elemenst in a specific condition 
+        // l.remove_if([](int n){      
+        //     return n%2;
+        // });
 
-        for(int i : l)
-        {
-            cout<<i<<endl;
-        }
+        // for(int i : l)
+        // {
+        //     cout<<i<<endl;
+        // }
+
+
+        // list<int> l2;
+
+        // l2.assign(5,4);  //assign 4 for 5 places list 
+
+
+        // //l.merge(l2); //this will merge two lists 
+
+        // l.splice(l.end(),l2);   // this will do such as merge but with specified place
+
+        l.sort();
+        l.unique();
+
+        for(int i:l){cout<<i<<endl;}
 
 
 
