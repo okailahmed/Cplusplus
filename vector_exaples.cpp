@@ -53,8 +53,10 @@ int main()
 
     //sort(v.rbegin(),v.rend());    //this will sort all element between this two postion 
 
-    reverse(v.rbegin(),v.rend());
-    
+    //reverse(v.rbegin(),v.rend());
+
+    vector<int>::iterator it ;              // this like poinetr 
+
     for(int i=0;i<v.size();i++)
     {
         cout<<v[i]<<endl;
