@@ -10,20 +10,20 @@ int main(){
 
     //they are sorted unique and fast
 
-    map<int , char> m{{1,'a'},{2,'b'},{3,'c'}};
+    // map<int , char> m{{1,'a'},{2,'b'},{3,'c'}};
 
-    m.insert({5,'d'});
-    m.emplace(5,'i');
+    // m.insert({5,'d'});
+    // m.emplace(5,'i');
 
-    m[4] = 'e';
+    // m[4] = 'e';
 
 
-    auto it= m.rbegin();
+    // auto it= m.rbegin();
 
-    for(;it!= m.rend();++it)
-    {
-        cout<< it->first <<":"<<it->second<<endl;
-    }
+    // for(;it!= m.rend();++it)
+    // {
+    //     cout<< it->first <<":"<<it->second<<endl;
+    // }
 
     // m.erase(3);  //this will erase key and value for 3 
 
@@ -40,6 +40,21 @@ int main(){
     // {
     //     cout<<i.first <<":"<<i.second<<endl;
     // }
+
+
+    multimap<int,char> mm{{1,'a'},{1,'a'},{2,'b'},{4,'c'},{5,'d'},{5,'d'}};
+
+
+
+    cout<<mm.count(1)<<endl;   //this will return the count for this key 
+
+    auto it = mm.begin();
+
+
+    for(;it != mm.end();++it)
+    {
+        cout<<it->first<<":"<<it->second<<endl;
+    }
 
     return 0;
 }
