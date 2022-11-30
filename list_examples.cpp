@@ -65,16 +65,39 @@ int main(){
 //     }
 
 
-    auto it = l.begin();  //point to the first place 
+    // auto it = l.begin();  //point to the first place 
 
-    it++;
+    // it++;
 
-    *it = 6;
+    // *it = 6;
 
-    for(it =l.begin() ; it != l.end() ;it++)
-    {
-        cout<< *it <<endl;
-    }
+    // for(it =l.begin() ; it != l.end() ;it++)
+    // {
+    //     cout<< *it <<endl;
+    // }
+
+
+        l.sort();  //to sort element in assending way 
+
+        l.sort(greater<int>());  //to sort elements in deassending way 
+
+        l.reverse();          //to reverse element in the list 
+
+        l.remove(5);           //this will remove all 5 elements 
+
+
+
+        // this is will remove elemenst in a specific condition 
+        l.remove_if([](int n){      
+            return n%2;
+        });
+
+        for(int i : l)
+        {
+            cout<<i<<endl;
+        }
+
+
 
     return 0;
 }
